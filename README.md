@@ -16,61 +16,15 @@ A full-stack, cross-platform mobile application for real-time public bus trackin
 
 ## 🏗️ Architecture
 
-bus-tracker-frontend/
-├── src/
-│   ├── screens/
-│   │   ├── public/
-│   │   │   ├── SplashScreen.js           
-│   │   │   ├── HomeScreen.js             
-│   │   │   ├── SettingsScreen.js         
-│   │   │   ├── SearchResultsScreen.js   
-│   │   │   ├── RouteDetailsScreen.js     
-│   │   │   └── LiveTrackingScreen.js     
-│   │   ├── auth/
-│   │   │   └── PartnerLoginScreen.js     
-│   │   ├── driver/
-│   │   │   ├── DriverDashboard.js       
-│   │   │   ├── ActiveTripScreen.js       
-│   │   │   └── TripHistoryScreen.js     
-│   │   └── admin/
-│   │       ├── AdminDashboard.js         
-│   │       ├── FleetManagementScreen.js  
-│   │       ├── RouteManagementScreen.js  
-│   │       ├── DriverManagementScreen.js 
-│   │       └── AnalyticsScreen.js        
-│   │
-│   ├── navigation/
-│   │   ├── PublicNavigator.js            
-│   │   ├── DriverNavigator.js           
-│   │   ├── AdminNavigator.js             
-│   │   └── RootNavigator.js              
-│   │
-│   ├── context/
-│   │   └── AuthContext.js            
-│   │
-│   │
-│   ├── services/
-│   │   ├── api.js                        
-│   │   └── locationService.js            
-│   │
-│   ├── components/
-│   │   ├── GlassCard.js                 
-│   │   ├── GlassButton.js              
-│   │   ├── RouteItem.js                  
-│   │   └── Header.js                     
-│   │
-│   ├── theme/
-│   │   ├── colors.js                    
-│   │   ├── spacing.js                 
-│   │   └── glass.js                     
-│   └── utils/
-│       └── constants.js                  
-├── App.js                                
-├── package.json                          
-├── babel.config.js                       
-└── app.json  
-
-
+```
+RealTimeBusTracker/
+├── bus-tracker-backend/     # Node.js + Express + MongoDB + Socket.IO
+└── bus-tracker-frontend/    # React Native + Expo SDK 54
+```
+ 
+### Backend Folder Structure
+ 
+```
 bus-tracker-backend/
 ├── src/
 │   ├── config/
@@ -109,12 +63,63 @@ bus-tracker-backend/
 │       ├── distance.js          # Haversine formula
 │       ├── idGenerator.js       # Human-readable ID generator
 │       └── constants.js         # App-wide constants
-├── .env                         # Environment variables
+├── .env.example
 ├── .gitignore
 ├── package.json
-├── server.js                    # Entry point
-└── README.md
-
+└── server.js                    # Entry point
+```
+ 
+### Frontend Folder Structure
+ 
+```
+bus-tracker-frontend/
+├── src/
+│   ├── screens/
+│   │   ├── public/
+│   │   │   ├── SplashScreen.js
+│   │   │   ├── HomeScreen.js
+│   │   │   ├── SettingsScreen.js
+│   │   │   ├── SearchResultsScreen.js
+│   │   │   ├── RouteDetailsScreen.js
+│   │   │   └── LiveTrackingScreen.js
+│   │   ├── auth/
+│   │   │   └── PartnerLoginScreen.js
+│   │   ├── driver/
+│   │   │   ├── DriverDashboard.js
+│   │   │   ├── ActiveTripScreen.js
+│   │   │   └── TripHistoryScreen.js
+│   │   └── admin/
+│   │       ├── AdminDashboard.js
+│   │       ├── FleetManagementScreen.js
+│   │       ├── RouteManagementScreen.js
+│   │       ├── DriverManagementScreen.js
+│   │       └── AnalyticsScreen.js
+│   ├── navigation/
+│   │   ├── PublicNavigator.js
+│   │   ├── DriverNavigator.js
+│   │   ├── AdminNavigator.js
+│   │   └── RootNavigator.js
+│   ├── context/
+│   │   └── AuthContext.js
+│   ├── services/
+│   │   ├── api.js
+│   │   └── locationService.js
+│   ├── components/
+│   │   ├── GlassCard.js
+│   │   ├── GlassButton.js
+│   │   ├── RouteItem.js
+│   │   └── Header.js
+│   ├── theme/
+│   │   ├── colors.js
+│   │   ├── spacing.js
+│   │   └── glass.js
+│   └── utils/
+│       └── constants.js
+├── App.js
+├── package.json
+├── babel.config.js
+└── app.json
+```
 
 
 ### Data Flow
