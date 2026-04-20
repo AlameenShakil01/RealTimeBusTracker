@@ -259,7 +259,7 @@ Routes, buses, drivers, stops — full CRUD. See [Backend Reference](bus-tracker
 ### 1. Clone
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/RealTimeBusTracker.git
+git clone https://github.com/AlameenShakil01/RealTimeBusTracker.git
 cd RealTimeBusTracker
 ```
 
